@@ -17,6 +17,7 @@ namespace Project.Controllers
                 new Animals() { AnimalName="Dog",Color="yellow"},
                 new Animals() { AnimalName="Cow",Color="black"},
                 new Animals() { AnimalName="Dove",Color="Navy"},
+                new Animals(){AnimalName="Goat",Color="white"}
             };
             
             return View(lstAl);
