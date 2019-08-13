@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ThemSP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Them moi san pham</h2>
+                                        @*MA RAZOR*@
+@{ 
+
+}
+@*html helper :la nhung cu phap c# de no gennerate ra html va bat dau =@ Html
+    -Form ban du lieu thong qua thuoc tinh Name
+    *@
+<form action="/Products/SubmitThemMoi" method="post">
+   
+    @using (Html.BeginForm("action", "Controller", FormMethod.Post, new { @class = "form-control" }))
+    {
+        @*@Html.TextBox("ProductId",null,new { @class = "form-control" })
+            @Html.TextBox("ProductName",null,new {@placeholder= "Ten san pham...",@class="form-control",@typy="email",@required="required" })
+            @Html.TextArea("MaSP",null,10,35,null)
+            <br />
+            @Html.CheckBox("abc", true)<span>Mon toan</span>
+            <hr />
+            @Html.RadioButton("Gender",1,true)<span>Male</span>
+            @Html.RadioButton("Gender", 0)<span>FeMale</span>
+            @Html.RadioButton("Gender",0)<span>FeMale</span>*@
+        @*<hr />
+        @Html.DropDownList("lstST", new List<SelectListItem>() {
+        new SelectListItem() {Text="Option 1",Value="1",Disabled=true },
+        new SelectListItem() {Text="Option 2",Value="2",Selected=true },
+        new SelectListItem() {Text="Option 3" ,Value="3" }
+        }, new { @class = "form-control" })*@
+        @Html.TextBox("ProductId", null, new { @class="form-control",@})
+        <hr />
+        <hr />
+        <input type="submit" value="Them Moi" />
+    }
+    
+</form>
+
+

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Project.Models.SanPham>
+@{
+    ViewBag.Title = "GetAllStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sach san pham</h2>
+<a href="/Form/ThemSP">Them SP</a>
+<table class="table table-bordered table-responsive" >
+    <thead>
+        <tr>
+            <td>Ma san pham</td>
+            <td>Ten san pham</td>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td><a href="/Danh-sach-san-pham/@item.ProductId">Ma sp :@item.ProductId</a></td>
+                <td>@item.ProductName</td>
+            </tr>
+        }
+    </thead>
+</table>
+

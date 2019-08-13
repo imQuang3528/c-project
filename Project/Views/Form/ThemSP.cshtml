@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "ThemSP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ThemSP</h2>
+
+@*<form action="/Form/AddProduct/" method="post">
+    <input type="text" placeholder="Find out here..." name="ProductId" class="form-control" />
+    <input type="text" placeholder="Find out here..." name="ProductName" class="form-control" />
+    <hr />
+    <input type="submit" value="Add Product" class="btn btn-primary" />
+</form>*@
+@using(Html.BeginForm("AddProduct","Form",FormMethod.Post))
+{
+    @Html.TextBox("ProductId",null,new {@required= "required",@placeholder="Find out here",@class="form-control"})
+    <br />
+    @Html.TextBox("ProductName", null, new { @required="required",@placeholder="Find out here", @class = "form-control" })
+    <hr />
+    <input type="submit" value="Add Student" class="btn btn-primary" />
+}

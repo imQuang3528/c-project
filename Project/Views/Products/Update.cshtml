@@ -1,0 +1,13 @@
+﻿@model Project.Models.SanPham
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Update</h2>
+<form action="/Products/Update" method="post">
+    <input type="text" placeholder="Ma sp" name="ProductId" value="@Model.ProductId"/>
+    <input type="text" placeholder="Ten sp" name="ProductName" value="@Model.ProductName"/>
+    <input type="submit" value="Sua SP" />
+</form>
+

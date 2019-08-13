@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Project.Models.Animals>
+@{
+    ViewBag.Title = "GetAnimal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetAnimal</h2>
+
+<table>
+    <tr>
+        <td>AnimalName :</td>
+        <td>Color :</td>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.AnimalName</td>
+            <td>@item.Color</td>
+        </tr>
+    }
+</table>
+

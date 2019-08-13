@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Project.Models.SanPham>
+@{
+    ViewBag.Title = "dsSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sach san pham</h2>
+<a href="/Products/ThemSP">Them moi</a>
+<table border="1">
+    <thead>
+        <tr>
+            <td>
+                Product Id
+            </td>
+            <td>Product Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a href="/chi-tiet-san-pham/@item.ProductId">Ma san pham :@item.ProductId</a></td>
+                <td>@item.ProductName</td>
+            </tr>
+        }       
+    </tbody>
+</table>
+<h2>Co 2 cach truyen du lieu</h2>
+<h3>+Truyen tren thanh URL</h3>
+<h4>URL METHOD GET:Product/GetProductById?id=1&name=abc(Khong theo format cua route)</h4>
+<h4>URL METHOD GET:Product/GetProductById/1(Theo format cua route)</h4>
+<h3>+Dung Form truyen du lieu</h3>
+

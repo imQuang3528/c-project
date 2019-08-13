@@ -1,0 +1,46 @@
+﻿@*@model IEnumerable<Project.Models.SinhVien>*@
+@*@model Project.Models.SinhVien*@
+@using Project.Models
+@{
+    ViewBag.Title = "ListStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListStudent</h2>
+@*Dung ma Razor de hien thi du lieu*@
+@*Ve Cu phap ma razor*@
+@{
+    //Viet code C# o day
+    int a = 10;
+    a++;
+}
+
+@*Hien thi du lieu bang 1 list*@
+@*<table>
+    <tr>
+        <td>StudentId</td>
+        <td>StudentName</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentId</td>
+            <td>@item.StudentName</td>
+        </tr>
+    }
+    
+</table>*@
+
+<table>
+    <tr>
+        <td>StudentId :</td>
+        <td>StudentName :</td>
+    </tr>
+    @foreach (var item in ViewBag.lstST as List<SinhVien>)
+    {
+        <tr>
+            <td>@item.StudentId</td>
+            <td>@item.StudentName</td>
+        </tr>
+    }
+</table>

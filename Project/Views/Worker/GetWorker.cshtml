@@ -1,0 +1,11 @@
+﻿@using Project.Models
+@{
+    ViewBag.Title = "GetWorker";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Da lay duoc du lieu trong DB</h2>
+@foreach(var item in Model)
+{
+    Console.WriteLine(item);
+}

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Point" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="ID_NhanVien" />
+    </Key>
+    <Property Name="ID_NhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ten_NV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay_sinh" Type="DateTime" Precision="3" />
+    <Property Name="Dia_chi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gioi_tinh" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="CRMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+  </EntityContainer>
+</Schema>
